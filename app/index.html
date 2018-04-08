@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="indicaAquiApp">
+  <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 pull-left">
+        <h3>Indica Aqui</h3>
+      </div>
+      <div class="col-md-6 pull-right text-right">
+        <h3>Botão logof</h3>
+      </div>
+
+    </div>
+
+
+    <div id="wrapper" class="active">
+
+      <!-- Sidebar -->
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul id="sidebar_menu" class="sidebar-nav">
+          <li class="sidebar-brand">
+            <a id="menu-toggle" href="#">Menu
+              <span id="main_icon" class="glyphicon glyphicon-align-justify"></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="sidebar-nav" id="sidebar">
+          <li>
+            <a id="dropItem">
+              <i>Link</i>
+              <span class="sub_icon glyphicon glyphicon-link"></span>
+            </a>
+            <ul class="sub_items show-items" id="sub_items">
+              <li>sub 1</li>
+              <li>sub 1</li>
+              <li>sub 1</li>
+            </ul>
+          </li>
+          <li>
+            <a>
+              <i>Link</i>
+              <span class="sub_icon glyphicon glyphicon-link"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+        <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+
+          <div class="jumbotron">
+
+          </div>
+
+          <div class="row marketing">
+
+          </div>
+
+          <div class="footer">
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    !function (A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+        (A[l].q = A[l].q || []).push(arguments)
+      }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <!-- endbuild -->
+
+  <script>
+    $("#menu-toggle").click(function (e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("active");
+    });
+    $("#dropItem").click(function (e) {
+      e.preventDefault();
+      $("#sub_items").toggleClass("show-items");
+    });
+  </script>
+</body>
+
+</html>
